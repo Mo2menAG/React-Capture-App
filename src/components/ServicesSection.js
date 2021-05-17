@@ -2,18 +2,24 @@ import React from "react";
 //Import img
 import home2 from "../img/home2.png"
 
+//styled
+import styled from "styled-components";
+
 //Import icons
 import clock from "../img/clock.svg"
 import money from "../img/money.svg"
 import diaphragm from "../img/diaphragm.svg"
 import teamwork from "../img/teamwork.svg"
 
+//styles
+import {About, Image, Hide, Describtion} from "../styles"
+
 const ServicesSectiont = () => {
     return(
-        <div className="services">
-            <div className="describtion">
+        <Services>
+            <Describtion>
                 <h2>Hight <span>Quality</span> services</h2>
-                <div className="cards">
+                <Cards>
                     <div className="card">
                         <div className="icon">
                             <img src={clock} alt="clock" />
@@ -42,13 +48,40 @@ const ServicesSectiont = () => {
                         </div>
                         <p>Lorem ipsum dolor sit amet.</p>
                     </div>
-                </div>
-            </div>
-            <div className="img">
+                </Cards>
+            </Describtion>
+            <Image>
                 <img src={home2} alt="camera" />
-            </div>
-        </div>
+            </Image>
+        </Services>
     );
 };
+const Services = styled(About)`
+
+h2 {
+    padding-bottom: 5rem;
+}
+
+p {
+    width: 70%;
+    padding: 2rem 0rem 4rem 0rem;
+}
+`;
+
+const Cards = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    .card {
+        flex-basis: 20rem;
+        .icon {
+            display: flex;
+            align-items: center;
+            h3 {
+                margin-left: 0.9rem;
+                padding: 1rem;
+            }
+        }
+    }
+`;
 
 export default ServicesSectiont;
