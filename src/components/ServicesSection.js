@@ -12,7 +12,7 @@ import diaphragm from "../img/diaphragm.svg"
 import teamwork from "../img/teamwork.svg"
 
 //styles
-import {About, Image, Hide, Describtion} from "../styles"
+import {About, Image, Describtion} from "../styles"
 
 const ServicesSectiont = () => {
     return(
