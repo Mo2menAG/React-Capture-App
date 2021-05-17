@@ -5,6 +5,7 @@ import { Switch, Route } from "react-router-dom";
 import AboutUS from "./pages/AboutUS";
 import OurWork from "./pages/OurWork";
 import ContactUs from "./pages/ContactUs"
+import Nav from "./components/Nav"
 
 //GlobalStyle
 import GlobalStyle from "./components/GlobalStyle"
@@ -13,6 +14,7 @@ function App() {
   return (
     <div className="App">
       <GlobalStyle />
+      <Nav />
       <Switch>
         <Route path="/" exact>
           <AboutUS />
