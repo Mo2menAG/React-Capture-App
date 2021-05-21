@@ -9,7 +9,7 @@ import goodtimes from "../img/goodtimes-small.png";
 
 //framer motion
 import { motion } from "framer-motion";
-import { pageAnimation } from "../animation";
+import { pageAnimation, fade } from "../animation";
 
 const OurWork = () => {
     return (
@@ -20,21 +20,21 @@ const OurWork = () => {
             exit="exit"
         >
             <Movie>
-                <h2>The Athlete</h2>
+                <motion.h2 variants={fade}>The Athlete</motion.h2>
                 <div className="line"></div>
                 <Link to="/work/the-athlete">
                     <img src={athlete} alt="athlete" />
                 </Link>
             </Movie>
             <Movie>
-                <h2>The Racer</h2>
+                <motion.h2 variants={fade}>The Racer</motion.h2>
                 <div className="line"></div>
                 <Link to="/work/the-racer">
                     <img src={theracer} alt="theracer" />
                 </Link>
             </Movie>
             <Movie>
-                <h2>Good Times</h2>
+                <motion.h2 variants={fade}>Good Times</motion.h2>
                 <div className="line"></div>
                 <Link to="/work/good-times">
                     <img src={goodtimes} alt="goodtimes" />
@@ -64,7 +64,7 @@ const Movie = styled.div`
     .line {
         height: 0.3rem;
         margin-bottom: 3rem;
-        background: #cccccc;
+        background: #23d997;
     }
 `;
 

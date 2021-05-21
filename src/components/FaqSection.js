@@ -1,44 +1,62 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-import {About} from "../styles";
+import { About } from "../styles";
+import Toggle from "./Toggle";
+import { AnimateSharedLayout } from "framer-motion";
 
 const FaqSecion = () => {
-    return(
+    return (
         <Faq>
-            <h2>Any Questions <span>FAQ</span></h2>
+            <h2>
+                Any Questions <span>FAQ</span>
+            </h2>
             <div className="questions">
-                <div className="question">
-                    <h3>How Do I Start?</h3>
-                    <div className="answer">
-                        <p>Lorem ipsum dolor sit amet.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, nam.</p>
-                    </div>
-                    <div className="faq-line"></div>
-                </div>
-                <div className="question">
-                    <h3>What Products Do You Offer?</h3>
-                    <div className="answer">
-                        <p>Lorem ipsum dolor sit amet.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, nam.</p>
-                    </div>
-                    <div className="faq-line"></div>
-                </div>
-                <div className="question">
-                    <h3>Daily Schedule?</h3>
-                    <div className="answer">
-                        <p>Lorem ipsum dolor sit amet.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, nam.</p>
-                    </div>
-                    <div className="faq-line"></div>
-                </div>
-                <div className="question">
-                    <h3>Payment Methods?</h3>
-                    <div className="answer">
-                        <p>Lorem ipsum dolor sit amet.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, nam.</p>
-                    </div>
-                    <div className="faq-line"></div>
-                </div>
+                <AnimateSharedLayout>
+                    <Toggle title="How Do I Start?">
+                        <div className="question">
+                            <div className="answer">
+                                <p>Lorem ipsum dolor sit amet.</p>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit. Ex, nam.
+                                </p>
+                            </div>
+                        </div>
+                    </Toggle>
+                    <Toggle title="What Products Do You Offer?">
+                        <div className="question">
+                            <div className="answer">
+                                <p>Lorem ipsum dolor sit amet.</p>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit. Ex, nam.
+                                </p>
+                            </div>
+                        </div>
+                    </Toggle>
+                    <Toggle title="Daily Schedule?">
+                        <div className="question">
+                            <div className="answer">
+                                <p>Lorem ipsum dolor sit amet.</p>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit. Ex, nam.
+                                </p>
+                            </div>
+                        </div>
+                    </Toggle>
+                    <Toggle title="Payment Methods?">
+                        <div className="question">
+                            <div className="answer">
+                                <p>Lorem ipsum dolor sit amet.</p>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit. Ex, nam.
+                                </p>
+                            </div>
+                        </div>
+                    </Toggle>
+                </AnimateSharedLayout>
             </div>
         </Faq>
     );
@@ -54,7 +72,7 @@ const Faq = styled(About)`
         padding-bottom: 1.5rem;
         font-weight: lighter;
     }
-    .faq-line{
+    .faq-line {
         background: #cccccc;
         height: 0.2rem;
         margin: 0.3rem 0rem;
@@ -65,9 +83,9 @@ const Faq = styled(About)`
         cursor: pointer;
     }
 
-    .answer{
+    .answer {
         padding: 2rem 0rem;
-        p{
+        p {
             padding: 1rem 0rem;
         }
     }
