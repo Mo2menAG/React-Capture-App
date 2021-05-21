@@ -1,6 +1,10 @@
 import React from "react";
 //section png
 import home1 from "../img/home1.png";
+
+//component
+import Wave from "./Wave";
+
 //styled
 //import styled from "styled-components";
 import { About, Image, Hide, Describtion } from "../styles";
@@ -37,6 +41,7 @@ const AboutSection = () => {
             <Image>
                 <img src={home1} alt="Guy with a camera" />
             </Image>
+            <Wave />
         </About>
     );
 };
