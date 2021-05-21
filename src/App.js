@@ -6,6 +6,7 @@ import AboutUS from "./pages/AboutUS";
 import OurWork from "./pages/OurWork";
 import ContactUs from "./pages/ContactUs"
 import Nav from "./components/Nav"
+import MovieDetails from "./pages/MovieDetails"
 
 //GlobalStyle
 import GlobalStyle from "./components/GlobalStyle"
@@ -19,8 +20,11 @@ function App() {
         <Route path="/" exact>
           <AboutUS />
         </Route>
-        <Route path="/work">
+        <Route path="/work" exact>
           <OurWork />
+        </Route>
+        <Route path="/work/:id">
+          <MovieDetails />
         </Route>
         <Route path="/contact">
           <ContactUs />
