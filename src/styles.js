@@ -15,7 +15,7 @@ export const Describtion = styled.div`
     padding-right: 5rem;
     flex: 1;
     h2 {
-        font-weight: lighter;
+        font-weight: bold;
     }
 `;
 
@@ -30,5 +30,5 @@ export const Image = styled.div`
 `;
 
 export const Hide = styled.div`
-overflow: hidden;
+    overflow: hidden;
 `;
