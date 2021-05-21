@@ -1,30 +1,41 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { useHistory } from "react-router-dom";
-import MovieState from "../MovieState"
+import MovieState from "../MovieState";
+
+//animation
+import { motion } from "framer-motion";
+import { pageAnimation } from "../animation";
 
 const MovieDetails = () => {
-    const history = useHistory()
+    const history = useHistory();
     const url = history.location.pathname;
-    const [movies, setMovies] = useState(MovieState)
-    const [movie, setMovie] = useState(null)
+    const [movies, setMovies] = useState(MovieState);
+    const [movie, setMovie] = useState(null);
 
     //useeffect
-    useEffect( () => {
-        const currentMovie = movies.filter((stateMovie) => stateMovie.url === url)
-        setMovie(currentMovie[0])
-    },[movies, url]);
+    useEffect(() => {
+        const currentMovie = movies.filter(
+            (stateMovie) => stateMovie.url === url
+        );
+        setMovie(currentMovie[0]);
+    }, [movies, url]);
 
     return (
         <>
-            { movie && (
-                <Details>
+            {movie && (
+                <Details
+                    variants={pageAnimation}
+                    initial="hidden"
+                    animate="show"
+                    exit="exit"
+                >
                     <HeadLine>
                         <h1>{movie.title}</h1>
                         <img src={movie.mainImg} alt="movie" />
                     </HeadLine>
                     <Awards>
-                        {movie.awards.map( (award) => (
+                        {movie.awards.map((award) => (
                             <Award>
                                 <h3>{award.title}</h3>
                                 <div className="line"></div>
@@ -41,7 +52,7 @@ const MovieDetails = () => {
     );
 };
 
-const Details = styled.div`
+const Details = styled(motion.div)`
     color: white;
 `;
 
@@ -51,10 +62,11 @@ const HeadLine = styled.div`
     position: relative;
     h1 {
         position: absolute;
-        top: 10%;
+        top: 8%;
         left: 50%;
         transform: translate(-50%, -10%);
         font-size: 1.6rem;
+        padding-bottom: 10rem;
     }
     img {
         width: 100%;

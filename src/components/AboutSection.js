@@ -3,24 +3,29 @@ import React from "react";
 import home1 from "../img/home1.png";
 //styled
 //import styled from "styled-components";
-import {About, Image, Hide, Describtion} from "../styles"
+import { About, Image, Hide, Describtion } from "../styles";
 
 const AboutSection = () => {
-    return(
-        <About> 
+    return (
+        <About>
             <Describtion>
                 <div className="title">
                     <Hide>
                         <h2>We work to make</h2>
                     </Hide>
                     <Hide>
-                        <h2>your <span>Dreams</span> come</h2>
+                        <h2>
+                            your <span>Dreams</span> come
+                        </h2>
                     </Hide>
                     <Hide>
                         <h2>true.</h2>
                     </Hide>
                 </div>
-                <p>Contact us for any photoghrapy ideas that you have. We are professionals with amazing skills.</p>
+                <p>
+                    Contact us for any photoghrapy ideas that you have. We are
+                    professionals with amazing skills.
+                </p>
                 <button>Contact Us</button>
             </Describtion>
             <Image>
