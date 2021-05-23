@@ -9,9 +9,13 @@ import goodtimes from "../img/goodtimes-small.png";
 
 //framer motion
 import { motion } from "framer-motion";
-import { pageAnimation, fade } from "../animation";
+import { pageAnimation, fade, scroll } from "../animation";
+import { UseScroll } from "../components/UseScroll";
 
 const OurWork = () => {
+    const [element1, controls1] = UseScroll();
+    const [element2, controls2] = UseScroll();
+    const [element3, controls3] = UseScroll();
     return (
         <Work
             variants={pageAnimation}
@@ -19,21 +23,21 @@ const OurWork = () => {
             animate="show"
             exit="exit"
         >
-            <Movie>
+            <Movie variants={scroll} animate={controls1} ref={element1}>
                 <motion.h2 variants={fade}>The Athlete</motion.h2>
                 <div className="line"></div>
                 <Link to="/work/the-athlete">
                     <img src={athlete} alt="athlete" />
                 </Link>
             </Movie>
-            <Movie>
+            <Movie variants={scroll} animate={controls2} ref={element2}>
                 <motion.h2 variants={fade}>The Racer</motion.h2>
                 <div className="line"></div>
                 <Link to="/work/the-racer">
                     <img src={theracer} alt="theracer" />
                 </Link>
             </Movie>
-            <Movie>
+            <Movie variants={scroll} animate={controls3} ref={element3}>
                 <motion.h2 variants={fade}>Good Times</motion.h2>
                 <div className="line"></div>
                 <Link to="/work/good-times">
@@ -50,7 +54,7 @@ const Work = styled(motion.div)`
     padding: 3rem 6rem;
 `;
 
-const Movie = styled.div`
+const Movie = styled(motion.div)`
     padding-bottom: 7rem;
     h2 {
         padding: 1rem 0rem;
