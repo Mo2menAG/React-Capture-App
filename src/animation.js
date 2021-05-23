@@ -46,3 +46,17 @@ export const fade = {
         },
     },
 };
+
+export const scroll = {
+    hidden: {
+        opacity: 0,
+        scale: 1.1,
+    },
+    show: {
+        opacity: 1,
+        scale: 1,
+        transition: {
+            duration: 1.1,
+        },
+    },
+};
