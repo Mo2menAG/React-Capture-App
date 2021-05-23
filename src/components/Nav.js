@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
-    return(
+    return (
         <StyledNav>
             <h1>
                 <Link to="">Capture</Link>
@@ -29,7 +29,10 @@ const StyledNav = styled.nav`
     margin: auto;
     justify-content: space-around;
     align-items: center;
-    
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
     //justify-content: space-between;
     background: #282828;
     a {
@@ -55,4 +58,4 @@ const StyledNav = styled.nav`
     }
 `;
 
-export default Nav
+export default Nav;

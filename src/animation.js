@@ -42,7 +42,7 @@ export const fade = {
     show: {
         opacity: 1,
         transition: {
-            duration: 2,
+            duration: 1.2,
         },
     },
 };

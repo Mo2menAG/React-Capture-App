@@ -7,6 +7,7 @@ import OurWork from "./pages/OurWork";
 import ContactUs from "./pages/ContactUs";
 import Nav from "./components/Nav";
 import MovieDetails from "./pages/MovieDetails";
+import ScrollTop from "./components/ScrollTop";
 
 //GlobalStyle
 import GlobalStyle from "./components/GlobalStyle";
@@ -35,6 +36,7 @@ function App() {
                         <ContactUs />
                     </Route>
                 </Switch>
+                <ScrollTop />
             </AnimatePresence>
         </div>
     );
