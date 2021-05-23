@@ -4,6 +4,7 @@ import home1 from "../img/home1.png";
 
 //component
 import Wave from "./Wave";
+import { Link } from "react-router-dom";
 
 //styled
 //import styled from "styled-components";
@@ -12,6 +13,7 @@ import { About, Image, Hide, Describtion } from "../styles";
 //framer motion
 import { motion } from "framer-motion";
 import { titleAnimation, fade } from "../animation";
+import styled from "styled-components";
 
 const AboutSection = () => {
     return (
@@ -36,7 +38,9 @@ const AboutSection = () => {
                     Contact us for any photoghrapy ideas that you have. We are
                     professionals with amazing skills.
                 </motion.p>
-                <motion.button variants={fade}>Contact Us</motion.button>
+                <Button variants={fade}>
+                    <Link to="/contact">Contact Us</Link>
+                </Button>
             </Describtion>
             <Image>
                 <img src={home1} alt="Guy with a camera" />
@@ -45,5 +49,12 @@ const AboutSection = () => {
         </About>
     );
 };
+
+const Button = styled(motion.button)`
+    a {
+        color: white;
+        text-decoration: none;
+    }
+`;
 
 export default AboutSection;

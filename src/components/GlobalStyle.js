@@ -23,10 +23,12 @@ button {
     color: white;
     font-family: 'Inter', sans-serif;
     transition: all 0.5s ease;
+    
     &:hover{
         background-color: #23d997;
         color: white;
     }
+   
 }
 
 h2 {
@@ -59,6 +61,13 @@ p {
     line-height: 150%;
 
 }
+
+html {
+    @media (max-width: 800px){
+        font-size:60%;
+    }
+}
+
 `;
 
-export default GlobalStyle
+export default GlobalStyle;
