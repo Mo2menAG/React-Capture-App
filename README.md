@@ -9,9 +9,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 -   Run (npm i) to get project dependencies
 -   Run (npm start) to start the app
 
-### App Screenshots
+### App gifs
 
-Full App  
+Gifs  
 :-------------------------:
 
-<img src="https://media.giphy.com/media/0TKgUXIP1AnCPyM4Hp/giphy.gif" width="1000" height="535" />
+<img src="https://media.giphy.com/media/wH52DfksSBgaWhOL8o/giphy.gif" width="896" height="504" />
+
+<img src="https://media.giphy.com/media/0TKgUXIP1AnCPyM4Hp/giphy.gif" width="896" height="504" />
